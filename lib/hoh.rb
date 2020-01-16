@@ -5,18 +5,18 @@
 # The tests will guide your construction.
 # PORTION_1[sub_category][sub_category][sub_category] = PORTION_2
   PORTION_1 = {
-   :label: "Kingdom",
-   :sub_category: {
-     :label: "Phylum",
-     :sub_category: {
-       :label: "Class"
+   label: "Kingdom",
+   sub_category: {
+     label: "Phylum",
+     sub_category: {
+       label: "Class"
      }
    }
  }
 # 
- PORTION_2 = {
-   :label: "Order"
- }
+# PORTION_2 = {
+#   label: "Order"
+# }
 # 
 # PORTION_3 = {
 #   label: "Family",
@@ -42,6 +42,6 @@ def naming_system
   # So, if we have the "Kingdom" node we should be able to "tunnel" into the
   # HoH all the way to Species!
   animals = PORTION_1
-  PORTION_2[:sub_category]
-  PORTION_1[:sub_category][:sub_category][:sub_category] = PORTION_2
+  PORTION_2[sub_category]
+  PORTION_1[sub_category][sub_category][sub_category] = PORTION_2
 end
